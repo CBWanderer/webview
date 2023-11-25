@@ -17,7 +17,37 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Renderer(uri: "webapps/hangman/index.html"),
+      home: const MainPage(),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("WebView Test"),
+          bottom: const TabBar(
+            tabs: [
+              Text("Hangman"),
+              Text("Balls"),
+              Text("Form"),
+            ],
+          ),
+        ),
+        body: const TabBarView(
+          children: [
+            Renderer(uri: "webapps/hangman/index.html"),
+            Renderer(uri: "webapps/balls/index.html"),
+            Renderer(uri: "webapps/forms/index.html"),
+          ],
+        ),
+      ),
     );
   }
 }

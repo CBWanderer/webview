@@ -52,8 +52,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - webapps/hangman/index.html
+    - webapps/balls/index.html
+    - webapps/forms/index.html
     - webapps/hangman/styles.css
     - webapps/hangman/script.js
+    - webapps/balls/styles.css
+    - webapps/balls/script.js
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
